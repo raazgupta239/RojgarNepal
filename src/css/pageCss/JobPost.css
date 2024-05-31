@@ -1,85 +1,87 @@
 .job-post-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+  max-width: 600px;
+
+  margin: 0 auto;
+  margin-top: 33px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.job-post-form h2 {
+  text-align: center;
+  color: #333;
+}
+
+.job-post-form h2 span {
+  color: #ff7f00;
+}
+
+.message {
+  text-align: center;
+  padding: 10px;
+  background-color: #dff0d8;
+  color: #3c763d;
+  margin-bottom: 20px;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+}
+
+.job-post-form form div {
+  margin-bottom: 15px;
+}
+
+.job-post-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.job-post-form label span {
+  color: red;
+}
+
+.job-post-form input,
+.job-post-form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.job-post-form .map-container {
+  margin-bottom: 15px;
+}
+
+.job-post-form button {
+  width: 100%;
+  padding:15px;
+  background-color: #00416B;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.job-post-form button:hover {
+  background-color: #00375c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .job-post-form {
+    padding: 15px;
   }
-  
-  .job-post-form h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .job-post-form h2 span {
-    color: #ff7f00;
-  }
-  
-  .message {
-    text-align: center;
-    padding: 10px;
-    background-color: #dff0d8;
-    color: #3c763d;
-    margin-bottom: 20px;
-    border: 1px solid #d6e9c6;
-    border-radius: 4px;
-  }
-  
-  .job-post-form form div {
-    margin-bottom: 15px;
-  }
-  
-  .job-post-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .job-post-form label span {
-    color: red;
-  }
-  
+
   .job-post-form input,
   .job-post-form textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 8px;
   }
-  
-  .job-post-form .map-container {
-    margin-bottom: 15px;
-  }
-  
+
   .job-post-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 12px;
   }
-  
-  .job-post-form button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .job-post-form {
-      padding: 15px;
-    }
-  
-    .job-post-form input,
-    .job-post-form textarea {
-      padding: 8px;
-    }
-  
-    .job-post-form button {
-      padding: 12px;
-    }
-  }
-  
+}
