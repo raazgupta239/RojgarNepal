@@ -63,9 +63,8 @@
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     list-style: none;
-    padding: 10px ;
-
-    margin:0px;
+    padding: 10px;
+    margin: 0px;
 }
 
 .navbar-links li:hover .dropdown {
@@ -108,7 +107,6 @@
     font-size: 1.5em;
     cursor: pointer;
     position: relative;
-  
 }
 
 .notification-bubble {
@@ -147,8 +145,6 @@
     .navbar-links.active {
         display: flex;
     }
-
-
 
     .navbar-search {
         width: 100%;

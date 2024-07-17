@@ -24,7 +24,9 @@ import ProfilePhoto from './pages/ProfilePhoto.jsx';
 import Recommendation from "./pages/Recommendations.jsx"
 import FreelancerService from './pages/FreelancerService.jsx';
 import FApplyNow from './pages/FApplyNow.jsx';
-
+import ChatSystem from "./pages/ChatSystem.jsx";
+import FreelancerDashboard from "./pages/FreelancerDashboard.jsx";
+import Booking from "./pages/Booking.jsx";
 
 const App = () => {
   return (
@@ -50,6 +52,9 @@ const App = () => {
 
 
         <Route path="/clientDashboard" element={<ClientDashboard />} />
+        <Route path="/freelancerDashboard" element={<FreelancerDashboard />} />
+
+
         <Route path="/profilePhoto" element={<ProfilePhoto />} />
 
         <Route path="/login" element={<Login />} />
@@ -57,6 +62,11 @@ const App = () => {
         <Route path="/verify-otp" element={<VerifyOtp />} />
         <Route path="/freelancer-service" element={<FreelancerService />} />
         <Route path="/recommendation" element={<Recommendation />} />
+        <Route path="/chat" element={<ChatSystem />} />
+
+        <Route path="/booking" element={<Booking />} />
+
+
 
       </Routes>
 

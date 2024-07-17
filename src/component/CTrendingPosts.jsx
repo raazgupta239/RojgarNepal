@@ -14,13 +14,15 @@ const CTrendingPosts = () => {
     const fetchPosts = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:8000/client/recent-jobs', {
+        const response = await axios.get('http://localhost:5000/client/recent-jobs', {
           headers: {
             Authorization: `Bearer ${token}`
           }
         });
+
         if (response.data.success) {
-          setPosts(response.data.data);
+          setPosts(response.data.recentJobs);
+          console.log(response.data.recentJobs);
         } else {
           setError(response.data.message);
         }
@@ -111,18 +113,28 @@ const CTrendingPosts = () => {
       <br />
       <div className="post-cards-container">
         {visiblePosts.map((post, index) => (
+      
           <div key={index} className="post-card">
             <div className="post-card-header">
               <section className='title'>Title:</section>
-              <h3 className="titlename">{post.title}</h3> 
+              <h3 className="titlename">{post.jobTitle}</h3> 
               <section className='time-display'>
                 <span className='clock'>🕓</span><br />
-                <span className='time-description'>{getTimeDifference(post.time)}</span>
+                <span className='time-description'>{getTimeDifference(post.createdAt)}</span>
               </section>
             </div>
             <br />
+  
             <p className="post-description">
-              <img className='user-profile' src={post.userProfile} alt="User Profile"/>
+
+              <img className='profileImage'
+            src={post.User.profileImageUrl}
+            alt="Profile"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = '../assets/react.svg'; // Fallback in case the image fails to load
+            }}
+          />
               <br /><br />
               "{post.description}"
             </p>
@@ -132,7 +144,7 @@ const CTrendingPosts = () => {
               <span className='location-value'> {post.location}</span>
               <br />
               <span className='posted-by'>Posted By:</span>
-              <span className='posted-by-value'> {post.postedBy}</span>
+              <span className='posted-by-value'> {post.User.fullName}</span>
             </p>
           </div>
         ))}
@@ -143,6 +155,7 @@ const CTrendingPosts = () => {
           <button className="view-more-btn" onClick={handleViewMore} title="View More"> ⟶</button>
         )}
       </div>
+         
     </section>
   );
   

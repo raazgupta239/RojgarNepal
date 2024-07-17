@@ -40,7 +40,7 @@ const VerifyOtp = () => {
 
     try {
       const otpCode = otp.join('');
-      const response = await axios.post('https://rojgarnepal.loca.lt/user/verify-otp', { emailOtp: otpCode });
+      const response = await axios.post('http://localhost:5000/user/verify-otp', { emailOtp: otpCode });
 
       console.log('OTP verified successfully', response.data);
 

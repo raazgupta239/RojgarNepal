@@ -3,13 +3,13 @@ import FHeader from '../component/FHeader';
 import FSuggestedJobs from '../component/FSuggestedJobs';
 import './../css/pageCss/FHome.css';
 import Footer from '../component/Footer';
-import Navbar from '../component/Navbar';
+import Navbarfreelancer from "../component/Navbarfreelancer";
 
 
 function FreelancerHome() {
   return (
     <>
-    <Navbar/>
+    <Navbarfreelancer/>
     <div className="freelancer-home">
       <FHeader/>
       <FSuggestedJobs />

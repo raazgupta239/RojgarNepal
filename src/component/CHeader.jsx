@@ -31,41 +31,45 @@ const CHeader = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const userId = localStorage.getItem("userId"); // Assuming you store userId in localStorage
-        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
-
-        const response = await axios.get(`http://localhost:8000/client/stats`, {
-          params: { userId },
+        const userId = localStorage.getItem("userId"); // Assuming userId is stored in localStorage
+        const token = localStorage.getItem("token"); // Retrieve token from localStorage
+    
+        const response = await axios.get(`http://localhost:5000/client/stats`, {
+          params: {
+            userId: userId
+          },
           headers: {
             Authorization: `Bearer ${token}`
           }
-     
         });
 
-        if (response.data.jobPosts.success && response.data.bookings.success) {
-          setJobPosts(response.data.jobPosts.count);
-          setBookings(response.data.bookings.count);
+
+    
+        if (response.data.success) {
+
+   
+          setJobPosts(response.data.data.jobPosts.count);
+          setBookings(response.data.data.bookings.count);
+
+          console.log(response.data.data.jobPosts.count);
+          console.log(response.data.data.bookings.count);
         } else {
           setError('Failed to fetch stats');
         }
       } catch (err) {
-
-
-        //Navigate to Login logic
-
+        console.error('Error fetching stats:', err);
+    
         if (err.response && (err.response.status === 401 || err.response.status === 403)) {
           // Unauthorized or Forbidden
           navigate('/login'); // Redirect to login page
         }
-
-        //Navigate to Login logic
-
-        
+    
         setError('Error fetching stats');
       } finally {
         setLoading(false);
       }
     };
+    
 
     fetchStats();
   }, []);

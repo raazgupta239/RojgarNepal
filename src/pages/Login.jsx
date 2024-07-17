@@ -29,7 +29,7 @@ const Login = () => {
 
     try {
       // Send POST request to your API endpoint using Axios
-      const response = await axios.post('https://rojgarnepal.loca.lt/user/login', formData);
+      const response = await axios.post('http://localhost:5000/user/login', formData);
 
 
       // Save the response data in local storage
@@ -40,6 +40,7 @@ const Login = () => {
       localStorage.setItem('token', token);
       localStorage.setItem('userId', userId);
       localStorage.setItem('userType', userType);
+  
 
       // Redirect user based on userType
       if (userType === 'Client') {

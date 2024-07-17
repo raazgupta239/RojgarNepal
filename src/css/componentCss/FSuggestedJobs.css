@@ -36,9 +36,13 @@
   flex-direction: column;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
-  padding-left: 80px; /* to accommodate profile image */
+  padding-left: 10px; 
 }
 
+.profileImage{
+  height: 100%;
+  width: 100%;
+}
 .jobs-title {
   color: #283f76;
   font-size: 30px;
@@ -54,7 +58,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   font-size: 27px;
-  color: black;
+  color: #352804;
   margin-top: 2px;
 }
 
@@ -75,7 +79,7 @@
 
 .jobpost-details {
   margin-top: 18px;
-  margin-left:0;
+  margin-left: 0;
 }
 
 .job-description {
@@ -105,6 +109,14 @@
   cursor: pointer;
 }
 
+.expandable-section{
+  height: 300px;
+}
+
+.expandable-section MapContainer{
+  height: 100%;
+}
+
 .payment {
   background-color: white;
   height: fit-content;
@@ -129,16 +141,23 @@
   height: fit-content;
 }
 
-.time {
-  font-size: 14px;
-  color: #ffda78;
-  position: absolute;
-  top: 4.8rem;
-  margin-bottom: 20px;
-  height: fit-content;
-  left: 5.1rem;
-  margin-top: 0rem;
+.jobpost-servicetype{
+  /* color: #352804; */
+  color:rgb(10, 45, 3);
+  margin-top: 10px;
+  font-weight: bolder;
 }
+
+/* .time {
+  font-size: 14px;
+  color: #352804;
+  position: absolute;
+  top:10rem;
+  /* margin-bottom: 20px; */
+  /* height: fit-content;
+  left: 0.5rem;
+  margin-top: 0rem; */
+/* } */ */
 
 .location-details {
   font-style: italic;
@@ -223,6 +242,29 @@
   color: white;
 }
 
+.expand-btn {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.expand-btn:hover {
+  background-color: #ddd;
+}
+
+.expandable-section {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: block;
+}
+
 /* Responsive styles */
 @media (max-width: 780px) {
   .jobs-title {
@@ -240,7 +282,7 @@
 
   .jobpost-title {
     font-size: 22px;
-    margin-left:10px;
+    /* margin-left: 10px; */
   }
 
   .job-description {
@@ -255,13 +297,13 @@
   }
 
   .time {
-    font-size: 13px;
+    /* font-size: 13px;
     top: 4.2rem;
-    margin-top: 22px;
-    left: 4.5rem;
+    margin-top: 22px; */
+    /* left: 4rem; */
+    /* top:9rem; */
   }
 }
-
 
 @media (max-width: 680px) {
   .jobs-title {
@@ -279,7 +321,7 @@
 
   .jobpost-title {
     font-size: 20px;
-    margin-left: 25px;
+    /* margin-left: 25px; */
   }
 
   .job-description {
@@ -294,10 +336,10 @@
   }
 
   .time {
-    font-size: 14px;
+    /* font-size: 14px;
     top: 3.6rem;
-    margin-top: 10px;
-    left: 4.6rem;
+    margin-top: 10px; */
+    /* left: 3rem; */
   }
 
   .pdel {

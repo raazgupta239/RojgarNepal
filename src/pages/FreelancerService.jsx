@@ -53,7 +53,7 @@ const FreelancerService = () => {
 
       const token = localStorage.getItem('token');
 
-      const response = await axios.post('https://rojgarnepal.loca.lt/user/service', formData, {
+      const response = await axios.post('http://localhost:5000/user/service', formData, {
     headers: {
       Authorization: `Bearer ${token}`, // Include the Bearer token in the Authorization header
       'Content-Type': 'application/json', // Optionally include the content type if needed

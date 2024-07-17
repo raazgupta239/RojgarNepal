@@ -75,6 +75,22 @@
     background-color: #0f2f50;
   }
   
+
+  .job-post-form .duration-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .job-post-form .duration-input input {
+    flex: 2;
+  }
+  
+  .job-post-form .duration-input select {
+    flex: 1;
+  }
+
+  
+  
   /* Responsive Styles */
   @media (max-width: 768px) {
     .job-post-form {

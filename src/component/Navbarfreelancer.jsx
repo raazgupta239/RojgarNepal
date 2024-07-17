@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faSignOutAlt, faComments, faBars, faAngleDown } from '@fortawesome/free-solid-svg-icons'; // Added faAngleDown
+import { faSearch, faSignOutAlt, faComments, faBars, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import './../css/componentCss/Navbarclient.css'; // Ensure this path is correct
+import './../css/componentCss/Navbarfreelancer.css'; // Ensure this path is correct
 import profile from './../images/profile.png';
 
-const Navbarclient = () => {
+const Navbarfreelancer = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false); // New state for services dropdown
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
 
   const handleLinkClick = () => {
-    setMenuOpen(false); // Close menu when a link is clicked
+    setMenuOpen(false);
   };
 
   const handleServicesToggle = () => {
@@ -29,7 +29,7 @@ const Navbarclient = () => {
       </div>
   
       <div className="navbar-search">
-        <input type="text" placeholder="Search Talents..." />
+        <input type="text" placeholder="Search Jobs..." />
         <FontAwesomeIcon icon={faSearch} className="search-icon" />
       </div>
       <div className="navbar-icons">
@@ -46,4 +46,4 @@ const Navbarclient = () => {
   );
 };
 
-export default Navbarclient;
+export default Navbarfreelancer;

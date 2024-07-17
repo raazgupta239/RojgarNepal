@@ -7,6 +7,10 @@
     margin-bottom: 1.25rem;
   }
   
+  .profileImage{
+    width: 20%;
+    border-radius: 50%;
+  }
   
   
   .trending-posts-border {
