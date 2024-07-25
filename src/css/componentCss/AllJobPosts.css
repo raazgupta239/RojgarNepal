@@ -214,6 +214,38 @@
     color: rgb(0, 0, 0);
   }
   
+
+  
+  
+.admin-confirmdelete {
+  cursor: pointer;
+   border: none;
+   background-color:blue;
+     padding: 8px;
+     border-radius: 1rem;
+ width: 8rem;
+     color: rgb(255, 255, 255);
+ }
+ 
+ .admin-confirmdelete:hover {
+   background-color: #ad1b29;
+   color: #fff;
+ }
+ 
+ .admin-cancel {
+   cursor: pointer;
+   
+   border-radius: 1rem;
+   border: none;
+   padding: 8px;
+   width: 6rem;
+ margin-left: 1rem;
+   color: rgb(0, 0, 0);
+ }
+ 
+ .admin-cancel:hover {
+   background-color: #5a6268;
+ }
   /* Responsive styles */
   @media (max-width: 780px) {
     .jobs-title {

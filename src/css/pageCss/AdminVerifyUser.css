@@ -13,12 +13,14 @@
 }
 
 .verification-requests {
-  margin-top: 20px;
+margin-top: 20px;
  margin-bottom: 2rem;
 }
 
 .verification-card {
-  display: flex;
+ 
+  margin-top: 1rem;
+
   align-items: center;
   background-color: #fdfcfb;
   border: 1px solid #4a8acb;
@@ -28,25 +30,41 @@
 width: 90%;
   box-shadow: 0 4px 8px rgba(110, 84, 39, 0.1);
 }
-
+.divfornameanddocuments{
+  display: flex;
+  flex-direction: row;
+}
 .profile-pic {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
+  
   border-radius: 50%;
+  margin-left: 1rem;
   margin-right: 20px;
 }
 
 .user-info {
   display: flex;
+  margin-top: -3rem;
   flex-direction: column;
-  flex-grow: 1;
+  margin-left: 6rem;
+ 
 }
 
 .user-info h3 {
+ 
+ 
+  font-size: 1.4rem;
   
-  margin-bottom: 10px;
 }
 
+.useremail {
+ color:midnightblue;
+ 
+text-align: center;
+  font-size: 1rem;
+  
+}
 .accept-button,
 .decline-button {
   padding: 10px 20px;
@@ -54,13 +72,17 @@ width: 90%;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-  margin-right: 10px;
+  width: 5rem;
+  margin-top: 3rem;
+
   transition: background-color 0.3s ease;
 }
 
 .accept-button {
   background-color: #28a745;
   color: #fff;
+  
+  margin-left: 1rem;
 }
 
 .accept-button:hover {
@@ -69,6 +91,7 @@ width: 90%;
 
 .decline-button {
   background-color: #dc3545;
+  margin-left: 2rem;
   color: #fff;
 }
 
@@ -77,9 +100,11 @@ width: 90%;
 }
 
 .documents {
-  margin-top: 10px;
+  margin-top: -10px;
   display: flex;
-  flex-direction: column;
+  margin-left: 8rem;
+  gap: 5rem;
+  flex-direction: row;
 }
 
 .document-section {
@@ -89,15 +114,62 @@ width: 90%;
 .document-section h4 {
   margin: 0;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .document-section a {
   display: block;
+  margin-top: 0.5rem;
   color: #007bff;
   text-decoration: none;
 }
 
 .document-section a:hover {
   text-decoration: underline;
+}
+
+.decline-reason {
+  
+
+  margin-top: 10px;
+}
+
+.decline-reason textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+
+
+.confirm-decline-button {
+ cursor: pointer;
+  border: none;
+  background-color:blue;
+    padding: 8px;
+    border-radius: 1rem;
+width: 8rem;
+    color:white;
+}
+
+.confirm-decline-button:hover {
+  background-color: #ad1b29;
+  color: #fff;
+}
+
+.cancel-decline-button {
+  cursor: pointer;
+  
+  border-radius: 1rem;
+  border: none;
+  padding: 8px;
+  width: 6rem;
+margin-left: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.cancel-decline-button:hover {
+  background-color: #5a6268;
 }

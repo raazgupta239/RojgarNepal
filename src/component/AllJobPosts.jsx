@@ -130,9 +130,11 @@ function AllJobPosts() {
       {jobToDelete ? (
         <div className="delete-form">
           <h3>Reason for deleting the job:</h3>
+          <br />
           <textarea value={deleteReason} onChange={handleReasonChange} placeholder="Type your reason here..."></textarea>
-          <button onClick={handleDeleteConfirm}>Confirm Delete</button>
-          <button onClick={() => setJobToDelete(null)}>Cancel</button>
+          <br />
+          <button className='admin-confirmdelete' onClick={handleDeleteConfirm}>Confirm Delete</button>
+          <button className='admin-cancel' onClick={() => setJobToDelete(null)}>Cancel</button>
         </div>
       ) : (
         <div className="adminjobs">
