@@ -41,7 +41,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="admin-dashboard">
-      <SideBar  />
+      <SideBar/>
       <main className="content">
         <TopSearchBar />
         <Header bookings={bookings} pagename="Bookings"/>
