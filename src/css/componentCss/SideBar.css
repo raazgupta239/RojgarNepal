@@ -1,8 +1,13 @@
+html, body, .app-root, .admin-dashboard {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .sidebar {
     width: 20%;
     height: 100vh; /* Full viewport height */
-/* Changed background color to black */
-background: black;
+    background: black;
     color: white;
     display: flex;
     flex-direction: column;
@@ -11,41 +16,41 @@ background: black;
     position: fixed; /* Keep it fixed to the left */
     top: 0;
     left: 0;
-    border-radius: 0 20px 20px 0 ;
-  }
-  
-  .logo {
+    border-radius: 0 20px 20px 0;
+}
+
+.logo {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-  }
-  
-  .user-info {
+}
+
+.user-info {
     margin-bottom: 20px;
-  }
-  
-  .navigation ul {
+}
+
+.navigation ul {
     list-style: none;
     width: 100%;
     padding: 0; /* Remove default padding */
-  }
-  
-  .navigation li {
+}
+
+.navigation li {
     padding: 100px;
     margin-top: 80px;
     border-bottom: 1px solid #34495e;
     cursor: pointer;
-  }
-  
-  .navigation .badge {
+}
+
+.navigation .badge {
     background-color: #e74c3c;
     color: white;
     border-radius: 50%;
     padding: 5px 10px;
     margin-left: 10px;
-  }
-  
-  .logout-button {
+}
+
+.logout-button {
     margin-top: auto;
     padding: 10px 20px;
     background-color: #e74c3c;
@@ -53,5 +58,56 @@ background: black;
     color: white;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 25%;
+        height: 100vh; /* Full viewport height */
+    }
+
+    .navigation li {
+        padding: 80px;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 30%;
+        height: 100vh; /* Full viewport height */
+    }
+
+    .navigation li {
+        padding: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 40%;
+        height: 100vh; /* Full viewport height */
+    }
+
+    .navigation li {
+        padding: 40px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 50%;
+        height: 100vh; /* Full viewport height */
+        padding: 10px;
+    }
+
+    .navigation li {
+        padding: 30px;
+        margin-top: 40px;
+    }
+
+    .logout-button {
+        padding: 8px 16px;
+    }
+}
