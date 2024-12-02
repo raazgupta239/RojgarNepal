@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <div>
     <Navbar/>
-    <p>Services Page to be made by abhinav</p>
+    <p></p>
     <Footer/>
     </div>
   )
